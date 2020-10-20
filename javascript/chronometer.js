@@ -5,20 +5,20 @@ class Chronometer {
     this.intervalId = 0;
     this.timeoutId = 0;
     let start = false;
-    // ... your code goes here
+    
   }
 
   startClick(callback) {
     this.intervalId = setInterval(()=>this.currentTime++ ,1000);
-        // ... your code goes here
+      
   }
   getMinutes() {
     return Math.floor(this.currentTime / 60);
-    // ... your code goes here
+    
   }
   getSeconds() {
     return this.currentTime % 60;
-    // ... your code goes here
+    
   }
   twoDigitsNumber() {
     let secondsToReturn;
@@ -39,16 +39,16 @@ class Chronometer {
     timeToReturn = minutesToReturn +' : '+secondsToReturn;
 
     return timeToReturn;
-    // ... your code goes here
+    
   }
   stopClick() {
     this.intervalId = clearInterval(this.intervalId);
     
-    // ... your code goes here
+    
   }
   resetClick() {
     this.currentTime = 0;
-    // ... your code goes here
+    
   }
   splitClick() {
     if (!this.start){
@@ -57,6 +57,6 @@ class Chronometer {
     {
       this.stopClick();
     } 
-    // ... your code goes here
+    
   }
 }
